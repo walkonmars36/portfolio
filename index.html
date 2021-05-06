@@ -9,19 +9,26 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__section">
-        <div class="header__section--menu">
-          <a class="toggle-menu" href="#"></a>
-          <nav class="menu">
-            <ul class="menu__inner">
-              <li class="menu__item"></li>
-              <li class="menu__item"></li>
-              <li class="menu__item"></li>
-              <li class="menu__item"></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#work">work</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+
+      <svg
+        class="header__menu-button"
+        viewBox="0 0 auto"
+        width="40"
+        height="40"
+      >
+        <rect width="40" height="40" fill="red"></rect>
+        <rect x="5" y="10" width="30" height="2" rx="1"></rect>
+        <rect x="5" y="18" width="30" height="2" rx="1"></rect>
+        <rect x="5" y="26" width="30" height="2" rx="1"></rect>
+      </svg>
     </header>
 
     <section class="banner">
@@ -30,9 +37,27 @@
           <span>Hi,</span><br />
           I'm Mark
         </h1>
-        <h2 class="banner__subtitle">A front end developer based in Bristol</h2>
+        <h2 class="banner__subtitle">
+          A front end developer based in Bristol.
+        </h2>
 
-        <a class="btn btn__banner" href="#">view my work</a>
+        <a class="btn banner__btn" href="#">view my work</a>
+      </div>
+    </section>
+
+    <section class="divider">
+      <div class="divider__tilt">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+            class="divider__shape-fill"
+          ></path>
+        </svg>
       </div>
     </section>
   </body>

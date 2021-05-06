@@ -1,0 +1,28 @@
+.divider {
+  position: relative;
+
+  &__tilt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+  }
+
+  &__shape-fill {
+    fill: white;
+  }
+}
+
+.btn {
+  margin-top: 3.125rem;
+}
