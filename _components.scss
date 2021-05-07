@@ -26,3 +26,64 @@
 .btn {
   margin-top: 3.125rem;
 }
+
+.menu__button {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 1rem;
+  right: 1rem;
+  background-color: $color-black;
+  border: none;
+  cursor: pointer;
+
+  &--burger {
+    fill: $color-white;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 15%;
+  z-index: 10;
+  transform: translateX(-100%);
+
+  ul {
+    background-color: $color-green;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+
+    a {
+      display: inline-block;
+      font-family: $font-body;
+      color: $color-banner;
+      font-size: 2.25rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: calc(100vh / 8) 0;
+      line-height: 0;
+      width: 100%;
+    }
+
+    li {
+      text-align: center;
+      border-bottom: 0.06rem solid $color-banner-light;
+    }
+
+    li:hover {
+      background: rgba($color-banner-light, 0.5);
+    }
+  }
+}
+
+.nav-is-open {
+  transform: translateX(0);
+}
