@@ -29,6 +29,9 @@ header {
   padding-bottom: 3.125rem;
   width: 70%;
 }
+.banner__content--inner {
+  margin-top: 3.125rem;
+}
 .banner__title {
   font-family: "Roboto", sans-serif;
   color: #72e1d1;

@@ -20,6 +20,10 @@ header {
     width: 70%;
   }
 
+  &__content--inner {
+    margin-top: 3.125rem;
+  }
+
   &__title {
     font-family: $font-body;
     color: $color-green;
