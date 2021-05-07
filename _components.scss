@@ -36,9 +36,18 @@
   background-color: $color-black;
   border: none;
   cursor: pointer;
+  z-index: 11;
 
   &--burger {
     fill: $color-white;
+  }
+
+  &--close-x {
+    stroke: $color-white;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-width: 5;
+    display: none;
   }
 }
 
@@ -47,9 +56,10 @@ nav {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 15%;
+  right: 0;
   z-index: 10;
   transform: translateX(-100%);
+  transition: transform ease-out 250ms;
 
   ul {
     background-color: $color-green;
@@ -85,5 +95,15 @@ nav {
 }
 
 .nav-is-open {
-  transform: translateX(0);
+  nav {
+    transform: translateX(0);
+  }
+
+  .menu__button--burger {
+    display: none;
+  }
+
+  .menu__button--close-x {
+    display: block;
+  }
 }

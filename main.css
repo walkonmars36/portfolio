@@ -89,9 +89,17 @@ header {
   background-color: #121212;
   border: none;
   cursor: pointer;
+  z-index: 11;
 }
 .menu__button--burger {
   fill: white;
+}
+.menu__button--close-x {
+  stroke: white;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5;
+  display: none;
 }
 
 nav {
@@ -99,9 +107,10 @@ nav {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 15%;
+  right: 0;
   z-index: 10;
   transform: translateX(-100%);
+  transition: transform ease-out 250ms;
 }
 nav ul {
   background-color: #72e1d1;
@@ -132,6 +141,12 @@ nav ul li:hover {
   background: rgba(71, 70, 99, 0.5);
 }
 
-.nav-is-open {
+.nav-is-open nav {
   transform: translateX(0);
+}
+.nav-is-open .menu__button--burger {
+  display: none;
+}
+.nav-is-open .menu__button--close-x {
+  display: block;
 }
