@@ -75,8 +75,11 @@ header {
   width: calc(100% + 1.3px);
   height: 70px;
 }
-.divider__shape-fill {
+.divider__shape-fill--white {
   fill: white;
+}
+.divider__shape-fill--grey {
+  fill: #f5f5f5;
 }
 
 .btn {
@@ -152,4 +155,24 @@ nav ul li:hover {
 }
 .nav-is-open .menu__button--close-x {
   display: block;
+}
+
+.about-me {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+.about-me__title {
+  font-family: "Roboto", sans-serif;
+  color: #72e1d1;
+  font-size: 2.25rem;
+}
+.about-me__profile--pic {
+  margin-top: 1rem;
+}
+.about-me__text {
+  margin-top: 1rem;
 }

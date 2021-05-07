@@ -53,3 +53,9 @@ header {
     padding: 0.8125em 4.5rem;
   }
 }
+
+@mixin container($width: 90%, $max-width: 50rem) {
+  width: $width;
+  margin: 0 auto;
+  max-width: $max-width;
+}

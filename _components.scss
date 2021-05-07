@@ -18,8 +18,12 @@
     height: 70px;
   }
 
-  &__shape-fill {
+  &__shape-fill--white {
     fill: white;
+  }
+
+  &__shape-fill--grey {
+    fill: $color-grey-light;
   }
 }
 
