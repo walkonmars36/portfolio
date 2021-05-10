@@ -1,0 +1,7 @@
+.work {
+  background-color: $color-grey-light;
+
+  &__items {
+    @include container;
+  }
+}

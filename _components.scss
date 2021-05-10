@@ -9,6 +9,7 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    vertical-align: top;
   }
 
   svg {
@@ -35,8 +36,8 @@
   position: absolute;
   width: 2.5rem;
   height: 2.5rem;
-  top: 2.5rem;
-  right: 2.5rem;
+  top: 2rem;
+  right: 2rem;
   background-color: $color-black;
   border: none;
   cursor: pointer;
@@ -109,5 +110,15 @@ nav {
 
   .menu__button--close-x {
     display: block;
+  }
+}
+
+h1.title {
+  font-family: $font-body;
+  color: $color-green;
+  font-size: 2.25rem;
+
+  span {
+    font-size: 1.5rem;
   }
 }
