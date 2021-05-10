@@ -1,7 +1,23 @@
 .work {
   background-color: $color-grey-light;
+  text-align: center;
 
-  &__items {
-    @include container;
+  img {
+    width: 100%;
   }
+}
+
+.work-item {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.work-item figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba($color-banner-light, 0.195);
 }

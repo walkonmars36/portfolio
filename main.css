@@ -184,9 +184,22 @@ h1.title span {
 
 .work {
   background-color: #f5f5f5;
+  text-align: center;
 }
-.work__items {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 73.125rem;
+.work img {
+  width: 100%;
+}
+
+.work-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-item figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(71, 70, 99, 0.195);
 }
