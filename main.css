@@ -282,3 +282,9 @@ textarea {
   font-size: 1.2rem;
   width: 100%;
 }
+
+footer {
+  background-color: #1d1936;
+  padding: 5rem 0;
+  text-align: center;
+}
