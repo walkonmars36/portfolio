@@ -1,0 +1,35 @@
+.banner {
+  background-color: $color-banner;
+  height: 85vh;
+
+  &__content {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5rem;
+  }
+
+  &__content--inner {
+    margin-top: 3.125rem;
+  }
+
+  &__subtitle {
+    font-family: $font-body;
+    color: $color-grey-light;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__btn {
+    border: 0.0625rem solid $color-green;
+  }
+
+  & a {
+    color: $color-green;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 0.8125em 4.5rem;
+  }
+}

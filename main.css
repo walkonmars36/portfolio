@@ -28,40 +28,6 @@ header {
   position: relative;
 }
 
-.banner {
-  background-color: #1d1936;
-  height: 90vh;
-  display: block;
-}
-.banner__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 5%;
-  margin-right: 10%;
-  padding-top: 5rem;
-  padding-bottom: 3.125rem;
-}
-.banner__content--inner {
-  margin-top: 3.125rem;
-}
-.banner__subtitle {
-  font-family: "Roboto", sans-serif;
-  color: #f5f5f5;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-.banner__btn {
-  border: 0.0625rem solid #72e1d1;
-}
-.banner a {
-  color: #72e1d1;
-  text-decoration: none;
-  text-align: center;
-  font-size: 0.875rem;
-  padding: 0.8125em 4.5rem;
-}
-
 .divider {
   position: relative;
 }
@@ -163,18 +129,58 @@ nav ul li:hover {
   display: block;
 }
 
-.about-me {
+.banner {
+  background-color: #1d1936;
+  height: 85vh;
+}
+.banner__content {
   width: 90%;
   margin: 0 auto;
   max-width: 73.125rem;
-}
-.about-me__flex {
+  border: 1px solid green;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 5rem;
 }
-.about-me__flex--profile-pic > img {
+.banner__content--inner {
+  margin-top: 3.125rem;
+}
+.banner__subtitle {
+  font-family: "Roboto", sans-serif;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.banner__btn {
+  border: 0.0625rem solid #72e1d1;
+}
+.banner a {
+  color: #72e1d1;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 0.8125em 4.5rem;
+}
+
+.about-me__heading {
+  padding-left: 5%;
+  padding-bottom: 1.5rem;
+}
+.about-me__grid {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 73.125rem;
+  border: 1px solid green;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.about-me__grid--profile-pic img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  grid-column: 1/span 2;
 }
 
 .portfolio {
@@ -185,6 +191,7 @@ nav ul li:hover {
   width: 90%;
   margin: 0 auto;
   max-width: 73.125rem;
+  border: 1px solid green;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
@@ -207,7 +214,7 @@ nav ul li:hover {
 }
 .projects__heading {
   padding-left: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 1.5rem;
 }
 .projects__title {
   margin-bottom: auto;
@@ -250,6 +257,7 @@ nav ul li:hover {
   width: 90%;
   margin: 0 auto;
   max-width: 73.125rem;
+  border: 1px solid green;
   padding: 2.5rem 0;
 }
 .contact__btn {
