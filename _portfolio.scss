@@ -1,0 +1,67 @@
+.portfolio {
+  background-color: $color-grey-light;
+}
+
+.projects {
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    &:hover figcaption,
+    &:focus figcaption {
+      top: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__heading {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    margin-bottom: auto;
+  }
+
+  &__item figcaption {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: $color-grey-light;
+    background-color: rgba($color-banner-light, 0.75);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    transition: top ease-in-out 250ms;
+  }
+
+  &__desc {
+    font-size: 0.875rem;
+    padding-bottom: 2rem;
+  }
+
+  a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-grey-light;
+    border-bottom: 3px solid $color-grey-light;
+    align-self: flex-start;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .featured {
+    grid-column: span 2;
+  }
+}
