@@ -4,20 +4,11 @@
 
   &__flex {
     display: flex;
-    min-height: 90vh;
-    align-items: flex-start;
+    flex-wrap: wrap;
 
     &--profile-pic > img {
+      display: block;
       width: 100%;
-      flex-basis: 50%;
-    }
-
-    &--text {
-      flex-basis: 50%;
-    }
-
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
     }
   }
 }

@@ -171,26 +171,29 @@ h1.title span {
 }
 .about-me__flex {
   display: flex;
-  min-height: 90vh;
-  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .about-me__flex--profile-pic > img {
+  display: block;
   width: 100%;
-  flex-basis: 50%;
-}
-.about-me__flex--text {
-  flex-basis: 50%;
-}
-@media screen and (max-width: 768px) {
-  .about-me__flex {
-    flex-direction: column;
-  }
 }
 
 .portfolio {
   background-color: #f5f5f5;
 }
 
+.projects {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 73.125rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.projects .featured {
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+}
 .projects img {
   width: 100%;
   display: block;
@@ -204,11 +207,15 @@ h1.title span {
   cursor: pointer;
 }
 .projects__heading {
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding-left: 5%;
+  padding-bottom: 5%;
 }
 .projects__title {
   margin-bottom: auto;
+  font-size: 1.5rem;
+}
+.featured .projects__title {
+  font-size: 2.25rem;
 }
 .projects__item figcaption {
   position: absolute;
@@ -227,19 +234,15 @@ h1.title span {
 .projects__desc {
   font-size: 0.875rem;
   padding-bottom: 2rem;
+  display: none;
+}
+.featured .projects__desc {
+  display: block;
 }
 .projects a {
   font-weight: bold;
-  text-transform: uppercase;
   color: #f5f5f5;
   border-bottom: 3px solid #f5f5f5;
   align-self: flex-start;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.projects .featured {
-  grid-column: span 2;
+  font-size: 0.875rem;
 }
