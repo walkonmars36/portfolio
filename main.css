@@ -10,6 +10,15 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: "Roboto", sans-serif;
+  color: #72e1d1;
+  font-size: 2.25rem;
+}
+h1 span {
+  font-size: 1.5rem;
+}
+
 h3 {
   font-size: 1.875rem;
 }
@@ -154,20 +163,10 @@ nav ul li:hover {
   display: block;
 }
 
-h1.title {
-  font-family: "Roboto", sans-serif;
-  color: #72e1d1;
-  font-size: 2.25rem;
-}
-h1.title span {
-  font-size: 1.5rem;
-}
-
 .about-me {
   width: 90%;
   margin: 0 auto;
   max-width: 73.125rem;
-  margin-top: 2rem;
 }
 .about-me__flex {
   display: flex;
@@ -245,4 +244,41 @@ h1.title span {
   border-bottom: 3px solid #f5f5f5;
   align-self: flex-start;
   font-size: 0.875rem;
+}
+
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 73.125rem;
+  padding: 2.5rem 0;
+}
+.contact__btn {
+  display: inline-block;
+  width: auto;
+  background-color: #72e1d1;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.75rem 2rem;
+  margin-left: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  display: block;
+  color: #2e2e41;
+}
+
+input,
+textarea {
+  display: block;
+  background-color: #f5f5f5;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  width: 100%;
 }

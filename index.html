@@ -43,7 +43,7 @@
       
       <div class="banner__content">
           <div class="banner__content--inner"></div>
-          <h1 class="title">
+          <h1>
             <span>Hi,</span><br />
             I'm Mark
           </h1>
@@ -73,7 +73,7 @@
     </section>
 
     <section class="about-me">
-      <h1 class="title">About Me</h1>
+      <h1>About Me</h1>
       
       <div class="about-me__flex">
      
@@ -99,10 +99,10 @@
     </section> 
 
     <section class="portfolio">
-      <h1 class="title projects__heading">My Projects</h1>
+      <h1 class="projects__heading">My Projects</h1>
       
       <div class="projects">
-        <!--Portfolio item 1 -->
+        <!--Portfolio item 1-->
         <figure class="projects__item featured">
           <img src="./images/project featured.png" alt="featured portfolio item">
           <figcaption>
@@ -114,7 +114,7 @@
           </figcaption>
         </figure>
 
-       <!--Portfolio item 2 -->
+     <!--Portfolio item 2 -->
         <figure class="projects__item">
           <img src="./images/project a.png" alt=" portfolio item">
           <figcaption>
@@ -165,8 +165,44 @@
           </figcaption>
         </figure>
       </div>
-      
-    </section>
+      </section>
+
+     <!-- <section class="divider">
+        <div class="divider__tilt">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="divider__shape-fill--white"
+            ></path>
+          </svg>
+        </div>
+      </section> -->
+
+      <section class="contact">
+        <h1>Get in touch</h1>
+          <form action="">
+            <label class="name">Name:
+            <input type="text" id="name">
+          </label>
+          
+          <label class="email">Email:
+            <input type="text" id="email">
+          </label>
+
+          <label message="message">Message:
+            <textarea name="" id="message"></textarea>
+          </label>
+
+          <input type="submit" value="SEND" class="btn contact__btn">
+
+        </form>
+      </section>
+    
 
     <script src="script.js"></script>
   </body>
