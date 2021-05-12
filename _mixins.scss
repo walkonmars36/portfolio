@@ -2,5 +2,11 @@
   width: $width;
   margin: 0 auto;
   max-width: $max-width;
-  border: 1px solid green;
+  /*b order: 1px solid green; */
+}
+
+@mixin mq($width: 50rem) {
+  @media (min-width: $width) {
+    @content;
+  }
 }

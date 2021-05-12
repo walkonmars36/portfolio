@@ -1,5 +1,33 @@
 footer {
   background-color: $color-dark-purple;
-  padding: 5rem 0;
+  padding: 4rem 0 0.5rem 0;
   text-align: center;
+
+  p {
+    color: $color-grey-light;
+    font-size: 0.625rem;
+  }
+}
+
+.fa-github,
+.fa-linkedin {
+  color: $color-grey-light;
+}
+
+.footer__social-icons {
+  @include container;
+  max-width: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  &::before {
+    content: "";
+    display: block;
+    height: 0.0625rem;
+    background-color: rgba($color-light-purple, 0.75);
+    margin: 4rem auto;
+    width: 50%;
+  }
 }

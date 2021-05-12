@@ -3,8 +3,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Roboto", sans-serif;
   color: #2e2e41;
+  font-size: 1rem;
+}
+@media (min-width: 50rem) {
+  body {
+    font-size: 1.125rem;
+  }
 }
 
 a {
@@ -100,28 +109,45 @@ nav ul li:hover {
   display: block;
 }
 
+.tilt {
+  vertical-align: top;
+}
+
 .header {
   background-color: #1d1936;
-  height: 85vh;
+  /*empty div used for positioning, musy be a better way? */
 }
 .header__content {
   width: 90%;
   margin: 0 auto;
   max-width: 73.125rem;
-  border: 1px solid green;
+  /*b order: 1px solid green; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 5rem;
+  padding-bottom: 3rem;
 }
-.header__content--inner {
-  margin-top: 3.125rem;
+@media (min-width: 50rem) {
+  .header h1 {
+    font-size: 8vw;
+  }
+}
+@media (min-width: 50rem) {
+  .header span {
+    font-size: 4vw;
+  }
 }
 .header__subtitle {
   font-family: "Roboto", sans-serif;
   color: #f5f5f5;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
+}
+@media (min-width: 50rem) {
+  .header__subtitle {
+    font-size: 4vw;
+  }
 }
 .header__btn {
   border: 0.0625rem solid #72e1d1;
@@ -133,16 +159,25 @@ nav ul li:hover {
   font-size: 0.875rem;
   padding: 0.8125em 4.5rem;
 }
-
-.about-me__heading {
-  padding-left: 5%;
-  padding-bottom: 1.5rem;
+@media (min-width: 50rem) {
+  .header a {
+    font-size: 2.5vw;
+  }
 }
-.about-me__grid {
+.header__content--inner {
+  margin-top: 3.125rem;
+}
+
+.about-me {
   width: 90%;
   margin: 0 auto;
   max-width: 73.125rem;
-  border: 1px solid green;
+  /*b order: 1px solid green; */
+}
+.about-me__heading {
+  padding: 1.5rem 0;
+}
+.about-me__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
@@ -162,7 +197,7 @@ nav ul li:hover {
   width: 90%;
   margin: 0 auto;
   max-width: 73.125rem;
-  border: 1px solid green;
+  /*b order: 1px solid green; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
@@ -184,12 +219,11 @@ nav ul li:hover {
   cursor: pointer;
 }
 .projects__heading {
-  padding-left: 5%;
-  padding-bottom: 1.5rem;
-  padding-top: 3rem;
+  padding: 1.5rem 0;
 }
 .projects__title {
   margin-bottom: auto;
+  color: #f5f5f5;
   font-size: 1.5rem;
 }
 .featured .projects__title {
@@ -229,8 +263,8 @@ nav ul li:hover {
   width: 90%;
   margin: 0 auto;
   max-width: 73.125rem;
-  border: 1px solid green;
-  padding: 2.5rem 0;
+  /*b order: 1px solid green; */
+  padding: 1.5rem 0 2.5rem 0;
 }
 .contact__btn {
   display: inline-block;
@@ -265,6 +299,34 @@ textarea {
 
 footer {
   background-color: #1d1936;
-  padding: 5rem 0;
+  padding: 4rem 0 0.5rem 0;
   text-align: center;
+}
+footer p {
+  color: #f5f5f5;
+  font-size: 0.625rem;
+}
+
+.fa-github,
+.fa-linkedin {
+  color: #f5f5f5;
+}
+
+.footer__social-icons {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 73.125rem;
+  /*b order: 1px solid green; */
+  max-width: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright::before {
+  content: "";
+  display: block;
+  height: 0.0625rem;
+  background-color: rgba(71, 70, 99, 0.75);
+  margin: 4rem auto;
+  width: 50%;
 }
