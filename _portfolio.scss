@@ -32,6 +32,7 @@
   &__heading {
     padding-left: 5%;
     padding-bottom: 1.5rem;
+    padding-top: 3rem;
   }
 
   &__title {
@@ -49,7 +50,7 @@
     right: 0;
     left: 0;
     color: $color-grey-light;
-    background-color: rgba($color-banner-light, 0.75);
+    background-color: rgba($color-light-purple, 0.75);
     text-align: left;
     display: flex;
     flex-direction: column;

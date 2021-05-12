@@ -1,33 +1,3 @@
-.divider {
-  position: relative;
-
-  &__tilt {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    vertical-align: top;
-  }
-
-  svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 70px;
-  }
-
-  &__shape-fill--white {
-    fill: white;
-  }
-
-  &__shape-fill--grey {
-    fill: $color-grey-light;
-  }
-}
-
 .btn {
   margin-top: 3.125rem;
 }
@@ -36,7 +6,7 @@
   position: absolute;
   width: 2.5rem;
   height: 2.5rem;
-  top: 2rem;
+  top: 1rem;
   right: 2rem;
   background-color: $color-black;
   border: none;
@@ -79,7 +49,7 @@ nav {
     a {
       display: inline-block;
       font-family: $font-body;
-      color: $color-banner;
+      color: $color-dark-purple;
       font-size: 2.25rem;
       font-weight: bold;
       text-transform: uppercase;
@@ -90,11 +60,11 @@ nav {
 
     li {
       text-align: center;
-      border-bottom: 0.06rem solid $color-banner-light;
+      border-bottom: 0.06rem solid $color-light-purple;
     }
 
     li:hover {
-      background: rgba($color-banner-light, 0.5);
+      background: rgba($color-light-purple, 0.5);
     }
   }
 }
