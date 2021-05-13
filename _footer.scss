@@ -19,6 +19,10 @@ footer {
   max-width: 6rem;
   display: flex;
   justify-content: space-between;
+
+  @include mq {
+    max-width: 7rem;
+  }
 }
 
 .copyright {
