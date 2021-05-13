@@ -8,6 +8,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
 
+  @include mq {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .featured {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
@@ -30,7 +34,11 @@
   }
 
   &__heading {
-    padding: 1.5rem 0;
+    padding: 1.5rem 5%;
+
+    @include mq {
+      font-size: 5vw;
+    }
   }
 
   &__title {

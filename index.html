@@ -22,28 +22,26 @@
     </nav>
 
     <header class="header">
+
+      <div class="header__triangle"></div>
       
       <div class="header__content">
+        
         <button class="menu__button">
-          
-          
           <svg class="menu__button--burger" viewBox="0 0 40 40" width="40" height="40">
             <rect x="5" y="10" width="30" height="2" rx="1"></rect>
             <rect x="5" y="18" width="30" height="2" rx="1"></rect>
             <rect x="5" y="26" width="30" height="2" rx="1"></rect>
           </svg>
-          
-          
-          
           <svg class="menu__button--close-x" viewbox="0 0 40 40">
             <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
           </svg>
         </button>
           
         
+       
         
         
-        <div class="header__content--inner"></div>
           <h1>
             <span>Hi,</span><br />
             I'm Mark
@@ -55,6 +53,8 @@
           <a class="btn header__btn" href="#">view my projects</a>
         </div>
       </div>
+
+      
     </header>
 
     <svg class="tilt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1d1936" fill-opacity="1" d="M0,224L1440,320L1440,0L0,0Z"></path></svg>
@@ -155,19 +155,19 @@
       <section class="contact">
         <h1>Get in touch</h1>
           <form action="">
-            <label class="name">Name:
+            <label class="contact__name">Name:
             <input type="text" id="name">
           </label>
           
-          <label class="email">Email:
+          <label class="contact__email">Email:
             <input type="text" id="email">
           </label>
 
-          <label message="message">Message:
+          <label message="message" class="contact__message">Message:
             <textarea name="" id="message"></textarea>
           </label>
 
-          <input type="submit" value="Send" class="btn contact__btn">
+          <input class="btn contact__btn" type="submit" value="Send" >
 
         </form>
       </section>

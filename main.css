@@ -10,7 +10,7 @@ body {
   color: #2e2e41;
   font-size: 1rem;
 }
-@media (min-width: 50rem) {
+@media (min-width: 48rem) {
   body {
     font-size: 1.125rem;
   }
@@ -25,9 +25,19 @@ h1 {
   color: #72e1d1;
   font-size: 2.25rem;
 }
+@media (min-width: 48rem) {
+  h1 {
+    font-size: 5vw;
+  }
+}
 h1 span {
   font-size: 1.5rem;
   color: #72e1d1;
+}
+@media (min-width: 48rem) {
+  h1 span {
+    font-size: 3vw;
+  }
 }
 
 h3 {
@@ -115,38 +125,29 @@ nav ul li:hover {
 
 .header {
   background-color: #1d1936;
-  /*empty div used for positioning, musy be a better way? */
 }
 .header__content {
   width: 90%;
-  margin: 0 auto;
-  max-width: 85.375rem;
+  margin: 0 5%;
+  max-width: 90rem;
   /*b order: 1px solid green; */
+  width: 60vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 5rem;
   padding-bottom: 3rem;
 }
-@media (min-width: 50rem) {
-  .header h1 {
-    font-size: 8vw;
-  }
-}
-@media (min-width: 50rem) {
-  .header span {
-    font-size: 4vw;
-  }
-}
 .header__subtitle {
   font-family: "Roboto", sans-serif;
   color: #f5f5f5;
   font-size: 1.25rem;
   font-weight: 400;
+  margin-right: auto;
 }
-@media (min-width: 50rem) {
+@media (min-width: 48rem) {
   .header__subtitle {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 .header__btn {
@@ -157,25 +158,22 @@ nav ul li:hover {
   text-decoration: none;
   text-align: center;
   font-size: 0.875rem;
-  padding: 0.8125em 4.5rem;
+  padding: 0.8125em 2rem;
 }
 .header a:hover {
   background-color: #72e1d1;
   color: #1d1936;
 }
-@media (min-width: 50rem) {
+@media (min-width: 48rem) {
   .header a {
     font-size: 2.5vw;
   }
-}
-.header__content--inner {
-  margin-top: 3.125rem;
 }
 
 .about-me {
   width: 90%;
   margin: 0 auto;
-  max-width: 85.375rem;
+  max-width: 90rem;
   /*b order: 1px solid green; */
 }
 .about-me__heading {
@@ -190,7 +188,7 @@ nav ul li:hover {
   display: block;
   max-width: 100%;
   max-height: 100%;
-  grid-column: 1/span 2;
+  grid-column: 1 / span 2;
 }
 
 .portfolio {
@@ -200,15 +198,20 @@ nav ul li:hover {
 .projects {
   width: 90%;
   margin: 0 auto;
-  max-width: 85.375rem;
+  max-width: 90rem;
   /*b order: 1px solid green; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
 }
+@media (min-width: 48rem) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .projects .featured {
-  grid-column: 1/span 2;
-  grid-row: 1/span 2;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
 }
 .projects img {
   width: 100%;
@@ -218,12 +221,18 @@ nav ul li:hover {
   position: relative;
   overflow: hidden;
 }
-.projects__item:hover figcaption, .projects__item:focus figcaption {
+.projects__item:hover figcaption,
+.projects__item:focus figcaption {
   top: 0;
   cursor: pointer;
 }
 .projects__heading {
-  padding: 1.5rem 0;
+  padding: 1.5rem 5%;
+}
+@media (min-width: 48rem) {
+  .projects__heading {
+    font-size: 5vw;
+  }
 }
 .projects__title {
   margin-bottom: auto;
@@ -266,7 +275,7 @@ nav ul li:hover {
 .contact {
   width: 90%;
   margin: 0 auto;
-  max-width: 85.375rem;
+  max-width: 90rem;
   /*b order: 1px solid green; */
   padding: 1.5rem 0 2.5rem 0;
 }
@@ -289,6 +298,30 @@ form {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 48rem) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    grid-template-areas: "name     email" "message  message" "   .     button";
+  }
+  form .contact__name {
+    grid-area: name;
+  }
+  form .contact__email {
+    grid-area: email;
+  }
+  form .contact__message {
+    grid-area: message;
+  }
+  form .contact__message textarea {
+    height: 10rem;
+  }
+  form .btn,
+  form .contact__button {
+    grid-area: button;
+  }
+}
 
 label {
   margin-top: 1rem;
@@ -304,6 +337,10 @@ textarea {
   padding: 0.75rem;
   font-size: 1.2rem;
   width: 100%;
+}
+
+textarea {
+  height: 5rem;
 }
 
 footer {
@@ -324,9 +361,9 @@ footer p {
 .footer__social-icons {
   width: 90%;
   margin: 0 auto;
-  max-width: 85.375rem;
+  max-width: 90rem;
   /*b order: 1px solid green; */
-  max-width: 8rem;
+  max-width: 6rem;
   display: flex;
   justify-content: space-between;
 }

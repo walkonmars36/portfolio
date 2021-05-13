@@ -2,7 +2,8 @@
   background-color: $color-dark-purple;
 
   &__content {
-    @include container;
+    @include header-container;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -10,26 +11,15 @@
     padding-bottom: 3rem;
   }
 
-  h1 {
-    @include mq {
-      font-size: 8vw;
-    }
-  }
-
-  span {
-    @include mq {
-      font-size: 4vw;
-    }
-  }
-
   &__subtitle {
     font-family: $font-body;
     color: $color-grey-light;
     font-size: 1.25rem;
     font-weight: 400;
+    margin-right: auto;
 
     @include mq {
-      font-size: 4vw;
+      font-size: 3vw;
     }
   }
 
@@ -42,7 +32,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 0.875rem;
-    padding: 0.8125em 4.5rem;
+    padding: 0.8125em 2rem;
 
     &:hover {
       background-color: $color-green;
@@ -52,10 +42,5 @@
     @include mq {
       font-size: 2.5vw;
     }
-  }
-
-  /*empty div used for positioning, musy be a better way? */
-  &__content--inner {
-    margin-top: 3.125rem;
   }
 }
