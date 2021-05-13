@@ -181,14 +181,18 @@ nav ul li:hover {
 }
 .about-me__grid {
   display: grid;
-  grid-template-columns: minmax(6rem, 1fr) minmax(6rem, 1fr);
-  gap: 1rem;
+  grid-template-columns: [port-start] minmax(6rem, 1fr) [name-start] minmax(6rem, 1fr) [img-end] 2fr [port-end];
 }
-.about-me__grid--profile-pic img {
+.about-me__grid__subtitle {
+  grid-column: name-start/port-end;
+  grid-row: 1/2;
+  align-self: end;
+}
+.about-me img {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
-  grid-column: 1/span 2;
+  width: 100%;
+  grid-column: port-start/img-end;
+  grid-row: 1/2;
 }
 
 .portfolio {
