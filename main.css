@@ -44,6 +44,11 @@ h3 {
   font-size: 1.875rem;
 }
 
+p {
+  margin: 1em 0;
+  font-size: 1rem;
+}
+
 .btn {
   margin-top: 3.125rem;
 }
@@ -63,7 +68,7 @@ h3 {
   fill: white;
 }
 .menu__button--close-x {
-  stroke: #808080;
+  stroke: #1d1936;
   fill: transparent;
   stroke-linecap: round;
   stroke-width: 5;
@@ -93,13 +98,16 @@ nav ul {
 nav ul a {
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  color: #808080;
+  color: #1d1936;
   font-size: 2.25rem;
   font-weight: bold;
   text-transform: uppercase;
   padding: calc(100vh / 8) 0;
   line-height: 0;
   width: 100%;
+}
+nav ul a:hover {
+  color: #f5f5f5;
 }
 nav ul li {
   text-align: center;
@@ -175,24 +183,35 @@ nav ul li:hover {
   margin: 0 auto;
   max-width: 90rem;
   /*b order: 1px solid green; */
+  padding-top: 1.5rem;
 }
 .about-me__heading {
-  padding: 1.5rem 0;
+  margin-bottom: 1rem;
 }
 .about-me__grid {
   display: grid;
-  grid-template-columns: [port-start] minmax(6rem, 1fr) [name-start] minmax(6rem, 1fr) [img-end] 2fr [port-end];
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
 }
-.about-me__grid__subtitle {
-  grid-column: name-start/port-end;
-  grid-row: 1/2;
-  align-self: end;
+@media (min-width: 48rem) {
+  .about-me__grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
 }
-.about-me img {
+.about-me__profile-pic {
   display: block;
   width: 100%;
-  grid-column: port-start/img-end;
-  grid-row: 1/2;
+}
+@media (min-width: 48rem) {
+  .about-me__subtitle, .about-me__text {
+    grid-column: 2/4;
+    grid-row: 1;
+  }
+}
+@media (min-width: 48rem) {
+  .about-me__text {
+    margin-top: 2rem;
+  }
 }
 
 .portfolio {
@@ -254,7 +273,7 @@ nav ul li:hover {
   right: 0;
   left: 0;
   color: #f5f5f5;
-  background-color: rgba(71, 70, 99, 0.75);
+  background-color: rgba(71, 70, 99, 0.85);
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -275,6 +294,61 @@ nav ul li:hover {
   border-bottom: 3px solid #f5f5f5;
   align-self: flex-start;
   font-size: 0.875rem;
+}
+
+.projects-modal {
+  position: fixed;
+  z-index: 12;
+  top: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background-color: white;
+  box-shadow: 0 0 0 5rem rgba(18, 18, 18, 0.9);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.projects-modal__header:nth-of-type(1) {
+  background-image: url(./images/project-featured.png);
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  padding: 5rem 0;
+  margin-bottom: 2rem;
+}
+.projects-modal__title-box {
+  background-color: rgba(71, 70, 99, 0.85);
+  padding: 2rem 1rem;
+  width: 70%;
+}
+.projects-modal__title {
+  color: #f5f5f5;
+  display: inline-block;
+}
+.projects-modal__title::after {
+  display: block;
+  content: "";
+  height: 1px;
+  margin: 0.5rem 0;
+  background-color: rgba(245, 245, 245, 0.5);
+  width: 100%;
+}
+.projects-modal__subtitle {
+  color: #f5f5f5;
+}
+.projects-modal__content {
+  text-align: left;
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 1rem;
+}
+
+img.projects-modal__full-width {
+  width: 100vw;
+  max-width: initial;
+  margin: 2rem calc(50% - 50vw);
+  height: 20vw;
+  object-fit: cover;
 }
 
 .contact {
