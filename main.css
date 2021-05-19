@@ -7,13 +7,8 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #808080;
+  color: #909090;
   font-size: 1rem;
-}
-@media (min-width: 48rem) {
-  body {
-    font-size: 1.125rem;
-  }
 }
 
 a {
@@ -40,39 +35,66 @@ h1 span {
   }
 }
 
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: #72e1d1;
+  font-size: 2.25rem;
+}
+@media (min-width: 48rem) {
+  h2 {
+    font-size: 5vw;
+  }
+}
+
 h3 {
-  font-size: 1.875rem;
+  font-size: 2rem;
+}
+@media (min-width: 48rem) {
+  h3 {
+    font-size: 4.5vw;
+  }
 }
 
 p {
-  margin: 1em 0;
-  font-size: 1rem;
+  margin: 1rem 0;
+}
+@media (min-width: 48rem) {
+  p {
+    font-size: 1.125rem;
+  }
 }
 
 .btn {
   margin-top: 3.125rem;
+  border-radius: 0.1875rem;
 }
 
-.menu__button {
-  position: absolute;
-  width: 2.5rem;
-  height: 2.5rem;
-  top: 1rem;
-  right: 2rem;
+.menu-button {
+  position: fixed;
+  width: 2.5em;
+  height: 2.5em;
+  top: 1%;
+  right: 5%;
   background-color: transparent;
   border: none;
   cursor: pointer;
   z-index: 11;
 }
-.menu__button--burger {
+.menu-button__burger {
   fill: white;
+  background-color: rgba(29, 25, 54, 0.4);
 }
-.menu__button--close-x {
+.menu-button__close-x {
   stroke: #1d1936;
-  fill: transparent;
   stroke-linecap: round;
-  stroke-width: 5;
+  stroke-width: 4;
   display: none;
+}
+@media (min-width: 48rem) {
+  .menu-button {
+    width: 3em;
+    height: 3em;
+  }
 }
 
 nav {
@@ -106,8 +128,10 @@ nav ul a {
   line-height: 0;
   width: 100%;
 }
-nav ul a:hover {
-  color: #f5f5f5;
+@media (min-width: 48rem) {
+  nav ul a {
+    font-size: 5vw;
+  }
 }
 nav ul li {
   text-align: center;
@@ -120,15 +144,39 @@ nav ul li:hover {
 .nav-is-open nav {
   transform: translateX(0);
 }
-.nav-is-open .menu__button--burger {
+.nav-is-open .menu-button__burger {
   display: none;
 }
-.nav-is-open .menu__button--close-x {
+.nav-is-open .menu-button__close-x {
   display: block;
 }
 
 .tilt {
   vertical-align: top;
+}
+
+.modal-button {
+  position: fixed;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 1%;
+  left: 0.5%;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 13;
+}
+.modal-button__close-x {
+  stroke: #1d1936;
+  stroke-linecap: round;
+  stroke-width: 5;
+}
+@media (min-width: 48rem) {
+  .modal-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .header {
@@ -143,8 +191,8 @@ nav ul li:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
+  padding-top: 5em;
+  padding-bottom: 3em;
 }
 .header__subtitle {
   font-family: "Roboto", sans-serif;
@@ -152,6 +200,8 @@ nav ul li:hover {
   font-size: 1.25rem;
   font-weight: 400;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (min-width: 48rem) {
   .header__subtitle {
@@ -166,7 +216,7 @@ nav ul li:hover {
   text-decoration: none;
   text-align: center;
   font-size: 0.875rem;
-  padding: 0.8125em 2rem;
+  padding: 0.8125em 2em;
 }
 .header a:hover {
   background-color: #72e1d1;
@@ -183,10 +233,23 @@ nav ul li:hover {
   margin: 0 auto;
   max-width: 90rem;
   /*b order: 1px solid green; */
-  padding-top: 1.5rem;
 }
 .about-me__heading {
-  margin-bottom: 1rem;
+  padding: 1.5rem 0 1rem 0;
+}
+.about-me__subtitle {
+  align-self: start;
+  font-size: 1.5rem;
+  color: #474663;
+  font-weight: 400;
+  margin-top: 1em;
+}
+@media (min-width: 48rem) {
+  .about-me__subtitle {
+    display: block;
+    font-size: 1.625rem;
+    margin-top: 0;
+  }
 }
 .about-me__grid {
   display: grid;
@@ -196,11 +259,24 @@ nav ul li:hover {
 @media (min-width: 48rem) {
   .about-me__grid {
     grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 4;
   }
 }
 .about-me__profile-pic {
   display: block;
   width: 100%;
+  border-radius: 0.625em;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
+}
+@media (min-width: 48rem) {
+  .about-me__text {
+    padding: 2rem 1rem;
+  }
+}
+@media (min-width: 48rem) {
+  .about-me__subtitle {
+    padding: 0 1rem;
+  }
 }
 @media (min-width: 48rem) {
   .about-me__subtitle, .about-me__text {
@@ -208,10 +284,50 @@ nav ul li:hover {
     grid-row: 1;
   }
 }
+
+.skills__icons {
+  font-size: 3rem;
+}
 @media (min-width: 48rem) {
-  .about-me__text {
-    margin-top: 2rem;
+  .skills__icons {
+    font-size: 4rem;
   }
+}
+@media (min-width: 48rem) {
+  .skills {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+}
+.skills__heading {
+  color: #72e1d1;
+}
+@media (min-width: 48rem) {
+  .skills__heading {
+    margin-top: 1em;
+  }
+}
+@media (min-width: 48rem) {
+  .skills__icons {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+.fa-html5 {
+  color: #de4b25;
+}
+
+.fa-css3-alt {
+  color: #239ddb;
+}
+
+.fa-js-square {
+  color: #f0d81d;
+}
+
+.fa-sass {
+  color: #c76495;
 }
 
 .portfolio {
@@ -245,13 +361,13 @@ nav ul li:hover {
 .projects__item {
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.5), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.22);
 }
 .projects__item:hover figcaption, .projects__item:focus figcaption {
   top: 0;
-  cursor: pointer;
 }
 .projects__heading {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 1rem 0;
 }
 @media (min-width: 48rem) {
   .projects__heading {
@@ -264,7 +380,7 @@ nav ul li:hover {
   font-size: 1.5rem;
 }
 .featured .projects__title {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 .projects__item figcaption {
   position: absolute;
@@ -281,7 +397,6 @@ nav ul li:hover {
   transition: top ease-in-out 250ms;
 }
 .projects__desc {
-  font-size: 0.875rem;
   padding-bottom: 2rem;
   display: none;
 }
@@ -290,23 +405,32 @@ nav ul li:hover {
 }
 .projects a {
   font-weight: bold;
+  cursor: pointer;
   color: #f5f5f5;
-  border-bottom: 3px solid #f5f5f5;
   align-self: flex-start;
   font-size: 0.875rem;
+  border-bottom: 2px solid transparent;
+}
+.projects a:hover {
+  border-bottom: 2px solid #f5f5f5;
 }
 
 .projects-modal {
   position: fixed;
   z-index: 12;
-  top: 1rem;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
+  top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
   background-color: white;
   box-shadow: 0 0 0 5rem rgba(18, 18, 18, 0.9);
   overflow-y: scroll;
   overflow-x: hidden;
+  display: none;
+  padding-bottom: 2rem;
+}
+.projects-modal.is-open {
+  display: block;
 }
 .projects-modal__header:nth-of-type(1) {
   background-image: url(./images/project-featured.png);
@@ -318,23 +442,45 @@ nav ul li:hover {
 }
 .projects-modal__title-box {
   background-color: rgba(71, 70, 99, 0.85);
-  padding: 2rem 1rem;
+  padding: 5% 5%;
   width: 70%;
+}
+@media (min-width: 48rem) {
+  .projects-modal__title-box {
+    margin: 0 auto;
+  }
 }
 .projects-modal__title {
   color: #f5f5f5;
   display: inline-block;
+  font-size: 2.25rem;
+}
+@media (min-width: 48rem) {
+  .projects-modal__title {
+    font-size: 4rem;
+  }
 }
 .projects-modal__title::after {
   display: block;
   content: "";
   height: 1px;
   margin: 0.5rem 0;
-  background-color: rgba(245, 245, 245, 0.5);
+  background-color: rgba(245, 245, 245, 0.75);
   width: 100%;
+}
+@media (min-width: 48rem) {
+  .projects-modal__title::after {
+    background-color: whitesmoke;
+  }
 }
 .projects-modal__subtitle {
   color: #f5f5f5;
+  font-size: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .projects-modal__subtitle {
+    font-size: 2.25rem;
+  }
 }
 .projects-modal__content {
   text-align: left;
@@ -342,13 +488,23 @@ nav ul li:hover {
   width: 90%;
   padding-bottom: 1rem;
 }
-
-img.projects-modal__full-width {
+.projects-modal__full-width img {
   width: 100vw;
   max-width: initial;
   margin: 2rem calc(50% - 50vw);
   height: 20vw;
   object-fit: cover;
+}
+
+@media (min-width: 48rem) {
+  img.projects-modal__float-right {
+    width: 50%;
+    float: right;
+    margin: 0 0 1rem 1rem;
+  }
+}
+.projects-modal.is-open {
+  display: block;
 }
 
 .contact {
@@ -357,6 +513,9 @@ img.projects-modal__full-width {
   max-width: 90rem;
   /*b order: 1px solid green; */
   padding: 1.5rem 0 2.5rem 0;
+}
+.contact__heading {
+  padding: 1.5rem 0 1rem 0;
 }
 .contact__btn {
   display: inline-block;
@@ -402,22 +561,43 @@ form .contact__button {
     grid-area: button;
   }
 }
+@media (min-width: 48rem) and (min-width: 48rem) {
+  form .btn,
+form .contact__button {
+    font-size: 2.5vw;
+  }
+  form .btn:hover,
+form .contact__button:hover {
+    box-shadow: 0 0.25em 0.5em 0 rgba(114, 225, 209, 0.5), 0 0.375em 1.25em 0 rgba(114, 225, 209, 0.22);
+  }
+}
 
 label {
   margin-top: 1rem;
   display: block;
-  color: #808080;
+  color: #909090;
+}
+@media (min-width: 48rem) {
+  label {
+    font-size: 1.125rem;
+  }
 }
 
 input,
 textarea {
   display: block;
   background-color: #f5f5f5;
-  border: none;
+  border: 0.02em solid whitesmoke;
   padding: 0.75rem;
   font-size: 1.2rem;
   width: 100%;
   margin-top: 0.1rem;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.05), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.05);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 0.0625em solid #1d1936;
 }
 
 textarea {

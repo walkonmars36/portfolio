@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-top: 5em;
+    padding-bottom: 3em;
   }
 
   &__subtitle {
@@ -17,6 +17,8 @@
     font-size: 1.25rem;
     font-weight: 400;
     margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 
     @include mq {
       font-size: 3vw;
@@ -32,7 +34,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 0.875rem;
-    padding: 0.8125em 2rem;
+    padding: 0.8125em 2em;
 
     &:hover {
       background-color: $color-green;

@@ -9,43 +9,47 @@
       src="https://kit.fontawesome.com/1bab37c906.js"
       crossorigin="anonymous"
     ></script>
+    
     <title>Mark Lawson's Portfolio</title>
   </head>
   <body>
+    
+   
     <nav>
       <ul>
         <li><a href="#home">home</a></li>
         <li><a href="#about">about</a></li>
-        <li><a href="#work">work</a></li>
+        <li><a href="#projects">projects</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
 
-    <header class="header">
+ 
+
+    
+    <header class="header" id="home">
+
+      <button class="menu-button">
+        <svg class="menu-button__burger" viewBox="0 0 40 40" >
+          <rect x="5" y="10" width="30" height="2" rx="1"></rect>
+          <rect x="5" y="18" width="30" height="2" rx="1"></rect>
+          <rect x="5" y="26" width="30" height="2" rx="1"></rect>
+        </svg>
+        <svg class="menu-button__close-x" viewbox="0 0 40 40">
+          <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
+        </svg>
+      </button>
 
       <div class="header__content">
-        
-        <button class="menu__button">
-          <svg class="menu__button--burger" viewBox="0 0 40 40" width="40" height="40">
-            <rect x="5" y="10" width="30" height="2" rx="1"></rect>
-            <rect x="5" y="18" width="30" height="2" rx="1"></rect>
-            <rect x="5" y="26" width="30" height="2" rx="1"></rect>
-          </svg>
-          <svg class="menu__button--close-x" viewbox="0 0 40 40">
-            <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
-          </svg>
-        </button>
-          
-        
           <h1>
             <span>Hi,</span><br />
             I'm Mark
           </h1>
-          <h2 class="header__subtitle">
+          <p class="header__subtitle">
             A front end developer based in Bristol.
-          </h2>
+          </p>
 
-          <a class="btn header__btn" href="#">view my projects</a>
+          <a class="btn header__btn" href="#projects">view my projects</a>
         </div>
       </div>
 
@@ -54,24 +58,42 @@
 
     <svg class="tilt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1d1936" fill-opacity="1" d="M0,224L1440,320L1440,0L0,0Z"></path></svg>
 
-    <section class="about-me">
+    <section class="about-me" id="about">
       
-      <h1 class="about-me__heading">About Me</h1>
+      <h2 class="about-me__heading">About Me ...</h2>
       
       <div class="about-me__grid">
 
         <img class="about-me__profile-pic" src="./images/profile-pic.png"> 
 
-        <h2 class="about-me__subtitle">Let me introduce myself ...</h3>
+        <span class="about-me__subtitle">A brief history.</span>
         
         <div class="about-me__text">
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, ipsa est impedit accusamus deserunt vero nemo sunt facilis, minus consequatur sapiente soluta ex autem, quaerat iusto non repellendus nulla sint!</p>
+            Born in the city of Oxford far too long ago. Nostrum, ipsa est impedit accusamus deserunt vero nemo sunt facilis, minus consequatur sapiente soluta ex autem, quaerat iusto non repellendus nulla sint!</p>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum numquam nesciunt adipisci pariatur et beatae commodi incidunt maiores odit voluptas, assumenda quod. Corrupti architecto minus minima suscipit voluptate atque accusamus!
           </p>
+          
         </div>
+
+        <div class="skills">
+          <h3 class="skills__heading">Skills</h3>
+            <p class="skills__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quam perspiciatis cumque possimus soluta? Quas incidunt accusamus labore, saepe commodi mollitia dolore, illum fuga aut esse fugiat voluptates, dolorem excepturi?</p>
+        </div>
+
+        <div class="skills__icons">
+          <i class="fab fa-html5 "></i>
+
+          <i class="fab fa-css3-alt "></i>
+
+          <i class="fab fa-js-square "></i>
+          <i class="fab fa-sass "></i>
+          
+        </div>
+          
       
       </div>
+
       
     </section>
 
@@ -79,11 +101,11 @@
       
      
 
-    <section class="portfolio"> 
+    <section class="portfolio" id="projects"> 
 
       <div class="portfolio__container">
 
-      <h1 class="projects__heading">My Projects</h1>
+      <h2 class="projects__heading">My Projects</h2>
       
       <div class="projects">
         
@@ -100,6 +122,12 @@
 
       <!--Project modal 1-->
           <div class="projects-modal">
+            <button class="modal-button">
+              <svg class="modal-button__close-x" viewbox="0 0 40 40">
+                <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
+              </svg>
+            </button>
+
             <div class="projects-modal__header">
               <div class="projects-modal__title-box">
                 <h3 class="projects-modal__title">Featured Project</h3>
@@ -108,10 +136,18 @@
             </div> <!--close modal header-->
               <div class="projects-modal__content">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos obcaecati ab molestiae deleniti dolor nulla iusto veritatis quod, modi dolore provident excepturi repellat possimus, accusantium cupiditate quae doloribus quibusdam similique.</p>
-                <img class="projects-modal__full-width" src="./images/project-featured.png" alt="featured project image">
+              
+              <div class="projects-modal__full-width"><img src="./images/project-featured.png" alt="featured project image">
+              </div>
+
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos obcaecati ab molestiae deleniti dolor nulla iusto veritatis quod, modi dolore provident excepturi repellat possimus, accusantium cupiditate quae doloribus quibusdam similique.</p>
+
+              <img class="projects-modal__float-right" src="./images/project-featured.png" alt="featured project image">
 
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos obcaecati ab molestiae deleniti dolor nulla iusto veritatis quod, modi dolore provident excepturi repellat possimus, accusantium cupiditate quae doloribus quibusdam similique.</p>
-                <img class="projects-modal__pull-right" src="./images/project-featured.png" alt="featured project image">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos obcaecati ab molestiae deleniti dolor nulla iusto veritatis quod, modi dolore provident excepturi repellat possimus, accusantium cupiditate quae doloribus quibusdam similique.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos obcaecati ab molestiae deleniti dolor nulla iusto veritatis quod, modi dolore provident excepturi repellat possimus, accusantium cupiditate quae doloribus quibusdam similique.</p>
+                
               </div>
           </div> 
           <!--close modal-->
@@ -171,9 +207,9 @@
 
     <svg class="tilt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5f5f5" fill-opacity="1" d="M0,224L1440,320L1440,0L0,0Z"></path></svg>
 
-      <section class="contact">
-        <h1>Get in touch</h1>
-          <form action="">
+      <section class="contact" id="contact">
+        <h2 class="contact__heading">Get in touch</h2>
+          <form action="mailto:mark@walkonmars.co.uk" method="get" enctype="text/plain">
             <label class="contact__name">Name:
             <input type="text" id="name">
           </label>
@@ -186,7 +222,7 @@
             <textarea name="" id="message"></textarea>
           </label>
 
-          <input class="btn contact__btn" type="submit" value="Send" >
+          <input class="btn contact__btn" type="submit" value="send" >
 
         </form>
       </section>
@@ -194,7 +230,7 @@
 
       <footer>
         <div class="footer__social-icons">
-          <a href="#" class="footer__social-icons__img" alt="link to Mark Lawson's Github page"><i class="fab fa-github fa-3x"></i></a>
+          <a href="https://github.com/walkonmars36" target="_blank" class="footer__social-icons__img" alt="link to Mark Lawson's Github page"><i class="fab fa-github fa-3x"></i></a>
           <a href="#" class="footer__social-icons__img" alt="link to Mark Lawson's Linkedin page"><i class="fab fa-linkedin fa-3x"></i></a>
           
         </div>

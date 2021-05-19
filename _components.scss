@@ -1,28 +1,35 @@
 .btn {
   margin-top: 3.125rem;
+  border-radius: 0.1875rem;
 }
 
-.menu__button {
-  position: absolute;
-  width: 2.5rem;
-  height: 2.5rem;
-  top: 1rem;
-  right: 2rem;
+.menu-button {
+  position: fixed;
+  width: 2.5em;
+  height: 2.5em;
+  top: 1%;
+  right: 5%;
   background-color: transparent;
   border: none;
+
   cursor: pointer;
   z-index: 11;
 
-  &--burger {
+  &__burger {
     fill: $color-white;
+    background-color: rgba($color-dark-purple, 0.4);
   }
 
-  &--close-x {
+  &__close-x {
     stroke: $color-dark-purple;
-    fill: transparent;
     stroke-linecap: round;
-    stroke-width: 5;
+    stroke-width: 4;
     display: none;
+  }
+
+  @include mq {
+    width: 3em;
+    height: 3em;
   }
 }
 
@@ -57,8 +64,8 @@ nav {
       line-height: 0;
       width: 100%;
 
-      &:hover  {
-        color: $color-grey-light;
+      @include mq {
+        font-size: 5vw;
       }
     }
 
@@ -69,7 +76,6 @@ nav {
 
     li:hover {
       background: rgba($color-light-purple, 0.5);
-      
     }
   }
 }
@@ -79,16 +85,39 @@ nav {
     transform: translateX(0);
   }
 
-  .menu__button--burger {
+  .menu-button__burger {
     display: none;
   }
 
-  .menu__button--close-x {
+  .menu-button__close-x {
     display: block;
-    
   }
 }
 
 .tilt {
   vertical-align: top;
+}
+
+.modal-button {
+  position: fixed;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 1%;
+  left: 0.5%;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 13;
+
+  &__close-x {
+    stroke: $color-dark-purple;
+    stroke-linecap: round;
+    stroke-width: 5;
+  }
+
+  @include mq {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

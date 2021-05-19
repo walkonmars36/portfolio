@@ -28,16 +28,17 @@
   &__item {
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.5),
+      0 0.375em 1.25em 0 rgba(0, 0, 0, 0.22);
 
     &:hover figcaption,
     &:focus figcaption {
       top: 0;
-      cursor: pointer;
     }
   }
 
   &__heading {
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 1rem 0;
 
     @include mq {
       font-size: 5vw;
@@ -49,7 +50,7 @@
     color: $color-grey-light;
     font-size: 1.5rem;
     .featured & {
-      font-size: 2.25rem;
+      font-size: 2rem;
     }
   }
 
@@ -69,7 +70,6 @@
   }
 
   &__desc {
-    font-size: 0.875rem;
     padding-bottom: 2rem;
     display: none;
     .featured & {
@@ -79,27 +79,34 @@
 
   a {
     font-weight: bold;
-
+    cursor: pointer;
     color: $color-grey-light;
-    border-bottom: 3px solid $color-grey-light;
     align-self: flex-start;
     font-size: 0.875rem;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid $color-grey-light;
+    }
   }
 }
 
 .projects-modal {
   position: fixed;
   z-index: 12;
-  top: 1rem;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
-  background-color:$color-white;
+  top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  background-color: $color-white;
   box-shadow: 0 0 0 5rem rgba($color-black, 0.9);
   overflow-y: scroll;
   overflow-x: hidden;
- 
+  display: none;
+  padding-bottom: 2rem;
 
+  &.is-open {
+    display: block;
+  }
 
   &__header:nth-of-type(1) {
     background-image: url(./images/project-featured.png);
@@ -112,26 +119,44 @@
 
   &__title-box {
     background-color: rgba($color-light-purple, 0.85);
-    padding: 2rem 1rem;
+    padding: 5% 5%;
     width: 70%;
+
+    @include mq {
+      margin: 0 auto;
+    }
   }
 
   &__title {
     color: $color-grey-light;
     display: inline-block;
+    font-size: 2.25rem;
+
+    @include mq {
+      font-size: 4rem;
+    }
 
     &::after {
       display: block;
-      content: '';
+      content: "";
       height: 1px;
-      margin: .5rem 0;
-      background-color: rgba($color-grey-light, .5) ;
+      margin: 0.5rem 0;
+      background-color: rgba($color-grey-light, 0.75);
       width: 100%;
+
+      @include mq {
+        background-color: rgba($color-grey-light, 1);
+      }
     }
   }
 
   &__subtitle {
     color: $color-grey-light;
+    font-size: 1.5rem;
+
+    @include mq {
+      font-size: 2.25rem;
+    }
   }
 
   &__content {
@@ -141,17 +166,23 @@
     padding-bottom: 1rem;
   }
 
+  &__full-width img {
+    width: 100vw;
+    max-width: initial;
+    margin: 2rem calc(50% - 50vw);
+    height: 20vw;
+    object-fit: cover;
+  }
 }
 
-  img.projects-modal__full-width  {
-  width: 100vw;
-  max-width: initial;
-  margin: 2rem calc(50% - 50vw);
-  height: 20vw;
-  object-fit: cover;
-  
+@include mq {
+  img.projects-modal__float-right {
+    width: 50%;
+    float: right;
+    margin: 0 0 1rem 1rem;
+  }
 }
 
-
-
-
+.projects-modal.is-open {
+  display: block;
+}
