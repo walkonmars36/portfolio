@@ -160,8 +160,8 @@ nav ul li:hover {
   position: fixed;
   width: 1.5rem;
   height: 1.5rem;
-  top: 2rem;
-  left: 2rem;
+  top: 1rem;
+  left: 1rem;
   background-color: white;
   border-radius: 50%;
   border: none;
