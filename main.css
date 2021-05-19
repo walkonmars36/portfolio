@@ -618,6 +618,10 @@ footer p {
 .fa-linkedin {
   color: #f5f5f5;
 }
+.fa-github:hover,
+.fa-linkedin:hover {
+  color: #72e1d1;
+}
 
 .footer__social-icons {
   width: 90%;

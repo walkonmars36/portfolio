@@ -12,6 +12,10 @@ footer {
 .fa-github,
 .fa-linkedin {
   color: $color-grey-light;
+
+  &:hover {
+    color: $color-green;
+  }
 }
 
 .footer__social-icons {
