@@ -58,7 +58,7 @@ nav {
       display: inline-block;
       font-family: $font-body;
       color: $color-dark-purple;
-      font-size: 2.25rem;
+      font-size: 2rem;
       font-weight: bold;
       text-transform: uppercase;
       padding: calc(100vh / 8) 0;
@@ -103,8 +103,8 @@ nav {
   position: fixed;
   width: 1.5rem;
   height: 1.5rem;
-  top: 1rem;
-  left: 1rem;
+  top: 2rem;
+  left: 2rem;
   background-color: white;
   border-radius: 50%;
   border: none;
