@@ -84,6 +84,7 @@ p {
 .menu-button__burger {
   fill: white;
   background-color: rgba(29, 25, 54, 0.4);
+  text-align: center;
 }
 .menu-button__close-x {
   stroke: #1d1936;
