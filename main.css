@@ -545,7 +545,7 @@ nav ul li:hover {
 }
 
 .projects-modal__header:nth-of-type(1) {
-  background-image: url();
+  background-color: rgba(37, 124, 232, 0.5);
   background-size: cover;
   background-position: center;
   text-align: left;
