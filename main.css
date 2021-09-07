@@ -619,6 +619,20 @@ nav ul li:hover {
      object-fit: cover;
 }
 
+.projects-modal a {
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(18, 18, 18, 0.9);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.projects-modal a:hover {
+  border-bottom: 2px solid rgba(18, 18, 18, 0.9);
+}
+
 @media (min-width: 48rem) {
   img.projects-modal__float-right {
     width: 50%;
