@@ -61,6 +61,16 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  h4 {
+    font-size: 3vw;
+  }
+}
+
 p {
   margin: 1rem 0;
 }
@@ -579,10 +589,14 @@ nav ul li:hover {
   border-bottom: 2px solid #1d1936;
 }
 
+.projects-modal h4 {
+  margin: 2em 0 1em;
+}
+
 .projects-modal__img {
-  background-color: red;
-  padding: 1em;
-  margin: 1em;
+  background-color: rgba(71, 70, 99, 0.1);
+  padding: 1.5em;
+  margin: 0.5em;
 }
 
 .projects-modal__title {
@@ -627,7 +641,7 @@ nav ul li:hover {
   text-align: left;
   margin: 0 auto;
   width: 90%;
-  padding-bottom: 1rem;
+  padding: 2em 0;
 }
 
 .projects-modal__full-width img {
@@ -645,8 +659,7 @@ nav ul li:hover {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    gap: 1em;
-    margin: 0 0 1rem 1rem;
+    margin-top: 2em;
   }
 }
 
