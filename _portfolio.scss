@@ -127,6 +127,24 @@
     }
   }
 
+  a {
+    color: rgba($color-light-purple, 0.9);
+    font-size: 1rem;
+    @include mq {
+      font-size: 1.125rem;
+    }
+    &:hover {
+      color: $color-dark-purple;
+      border-bottom: 2px solid $color-dark-purple;
+    }
+  }
+
+  &__img {
+    background-color: red;
+    padding: 1em;
+    margin: 1em;
+  }
+
   &__title {
     color: $color-grey-light;
     display: inline-block;
@@ -173,24 +191,13 @@
     height: 20vw;
     object-fit: cover;
   }
-
-  a {
-    font-weight: bold;
-    cursor: pointer;
-    color: rgba($color-black, 0.9);
-    align-self: flex-start;
-    font-size: 1rem;
-    border-bottom: 2px solid transparent;
-    &:hover {
-      border-bottom: 2px solid rgba($color-black, 0.9);
-    }
-  }
 }
 
 @include mq {
-  img.projects-modal__float-right {
-    width: 50%;
-    float: right;
+  .projects-modal__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
     margin: 0 0 1rem 1rem;
   }
 }

@@ -192,8 +192,6 @@ nav ul li:hover {
   height: 1.5rem;
   top: 2rem;
   left: 2rem;
-  background-color: white;
-  border-radius: 50%;
   border: none;
   cursor: pointer;
   z-index: 13;
@@ -565,6 +563,28 @@ nav ul li:hover {
   }
 }
 
+.projects-modal a {
+  color: rgba(71, 70, 99, 0.9);
+  font-size: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .projects-modal a {
+    font-size: 1.125rem;
+  }
+}
+
+.projects-modal a:hover {
+  color: #1d1936;
+  border-bottom: 2px solid #1d1936;
+}
+
+.projects-modal__img {
+  background-color: red;
+  padding: 1em;
+  margin: 1em;
+}
+
 .projects-modal__title {
   color: #f5f5f5;
   display: inline-block;
@@ -619,24 +639,13 @@ nav ul li:hover {
      object-fit: cover;
 }
 
-.projects-modal a {
-  font-weight: bold;
-  cursor: pointer;
-  color: rgba(18, 18, 18, 0.9);
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  font-size: 1rem;
-  border-bottom: 2px solid transparent;
-}
-
-.projects-modal a:hover {
-  border-bottom: 2px solid rgba(18, 18, 18, 0.9);
-}
-
 @media (min-width: 48rem) {
-  img.projects-modal__float-right {
-    width: 50%;
-    float: right;
+  .projects-modal__images {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 1em;
     margin: 0 0 1rem 1rem;
   }
 }
