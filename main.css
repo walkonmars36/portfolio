@@ -590,6 +590,7 @@ nav ul li:hover {
 }
 
 .projects-modal h4 {
+  text-align: center;
   margin: 2em 0 1em;
 }
 
@@ -642,6 +643,12 @@ nav ul li:hover {
   margin: 0 auto;
   width: 90%;
   padding: 2em 0;
+}
+
+@media (min-width: 48rem) {
+  .projects-modal p {
+    text-align: center;
+  }
 }
 
 .projects-modal__full-width img {

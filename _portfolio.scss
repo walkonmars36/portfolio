@@ -140,6 +140,7 @@
   }
 
   h4 {
+    text-align: center;
     margin: 2em 0 1em;
   }
 
@@ -186,6 +187,12 @@
     margin: 0 auto;
     width: 90%;
     padding: 2em 0;
+  }
+
+  @include mq {
+    p {
+      text-align: center;
+    }
   }
 
   &__full-width img {
